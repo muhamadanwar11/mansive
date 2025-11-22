@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary ❤️</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap');
+
+        body {
+            margin: 0;
+            background: #ffe3f1;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ==== PASSWORD PAGE ==== */
+        #password-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ffb6d9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #password-box {
+            background: white;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(255, 0, 100, 0.3);
+        }
+
+        #password-box h2 {
+            color: #ff3a85;
+        }
+
+        #password-input {
+            width: 90%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 2px solid #ff8ac1;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        #password-btn {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            border: none;
+            background: #ff3a85;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .shake {
+            animation: shake 0.3s;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(-5px); }
+            25% { transform: translateX(5px); }
+            50% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* ==== MAIN PAGE STYLE ==== */
+        .parallax {
+            background-image: url('https://i.imgur.com/j9j4Q9k.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 70px;
+            color: #ff5fa2;
+            text-shadow: 0 0 15px #fff, 0 0 25px #ff5fa2;
+        }
+
+        section {
+            padding: 70px 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: 1s ease;
+        }
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .story-card {
+            background: white;
+            padding: 30px;
+            max-width: 750px;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 105, 150, 0.3);
+            border: 2px solid #ffb6d9;
+        }
+
+        img.photo {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 5px solid #ffb6d9;
+            box-shadow: 0 5px 20px rgba(255, 105, 150, 0.4);
+        }
+
+        .big-heart {
+            font-size: 100px;
+            color: #ff2d75;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- === PASSWORD PAGE === -->
+    <div id="password-page">
+        <div id="password-box">
+            <h2>Masukkan Password 💖</h2>
+            <input type="password" id="password-input" placeholder="•••••••">
+            <button id="password-btn">Masuk</button>
+        </div>
+    </div>
+
+    <!-- === MAIN CONTENT (HIDDEN FIRST) === -->
+    <div id="main-content" style="display:none;">
+
+        <div class="parallax" id="header">
+            <div class="title">Happy Two Mansive Sayang ❤️</div>
+        </div>
+
+        <section>
+            <div class="story-card">
+                <img src="poto_pertama.jpg" class="photo">
+                <h2>Poto Pertama Kita ✨</h2>
+                <p>Pertama Ketemu karena KKN tapi di poto itu kita sama sekali ga akrab lebih tepatnya jarang bicara </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="story-card">
+                <img src="niat.jpg" class="photo">
+                <h2> POTO PENGEN DI POTO INI MAH 💗</h2>
+                <p>Gatau Kalo kita bakal sampe jadian padahal ini poto waktu itu cuma pengan di poto aja gada rasa apapun ya temen tuh bener temen</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="story-card">
+                <img src="papandayan.jpg" class="photo">
+                <h2>Ini Ketika Main Ke papandayan masih sama anak anak KKN Juga🌸</h2>
+                <p>Banyak hal yang terjadi disana, dengan drama di awal sebelum berangkat yang sangan deemmmm banget</p>
+            </div>
+        </section>
+
+
+        <div class="story-card">
+            <video width="100%" controls style="max-width:720px;margin:20px auto;display:block;">
+                <source src="pantai.mp4" type="video/mp4">
+                </video>
+             <h2>PANTAI</h2>
+             <p>Mungkin disinilah kita awal mula sangat dekat banget karena kita sama sama terus dari awal perjalanan sampe pulang selalu bersama, dan perhatian kasih sayang mulai dari sini</p>
+ 
+        </div>
+
+        <section>
+            <div class="story-card">
+                <img src="poto.jpg" class="photo">
+                <h2>Momen Indah Kita 💗</h2>
+                <p>Ini adalah poto ketika sudah jadian, dengan banyak drama drama yang muncul</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="story-card">
+                <img src="potongopi.jpg" class="photo">
+                <h2>Terima Kasih Sudah Bertahan 🌸</h2>
+                <p>Yang aku banggakan bukan hubungannya, tapi cara kita berjuang bersama.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="big-heart">❤️</div>
+            <h2 style="font-family:'Great Vibes'; font-size:50px; color:#ff3a85">I Love You</h2>
+            <p>Ayo tetap berjalan bersama sampai kapan pun.</p>
+        </section>
+    </div>
+
+    <script>
+        // PASSWORD SYSTEM
+        const btn = document.getElementById("password-btn");
+        const passInput = document.getElementById("password-input");
+        const passwordPage = document.getElementById("password-page");
+        const mainContent = document.getElementById("main-content");
+
+        const correctPassword = "23092025"; // GANTI DI SINI
+
+        btn.addEventListener("click", () => {
+            if (passInput.value === correctPassword) {
+
+                passwordPage.style.opacity = "0";
+                setTimeout(() => {
+                    passwordPage.style.display = "none";
+                    mainContent.style.display = "block";
+                    document.getElementById("header").style.opacity = "1";
+                }, 600);
+
+            } else {
+                passInput.classList.add("shake");
+                setTimeout(() => passInput.classList.remove("shake"), 300);
+            }
+        });
+
+        // ENTER key
+        passInput.addEventListener("keyup", (e) => {
+            if (e.key === "Enter") btn.click();
+        });
+
+        // Scroll show animation
+        const sections = document.querySelectorAll("section");
+
+        function showOnScroll() {
+            const trigger = window.innerHeight * 0.85;
+
+            sections.forEach(sec => {
+                const top = sec.getBoundingClientRect().top;
+                if (top < trigger) {
+                    sec.classList.add("show");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", showOnScroll);
+    </script>
+
+</body>
+</html>
